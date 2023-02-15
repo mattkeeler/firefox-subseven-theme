@@ -32,12 +32,12 @@ jobs:
         with:
           cmd: build
           source: src
-          filename: "subseven.xpi"
+          filename: "firefox-subseven-theme.xpi"
           #ignoreFiles: '[ "" ]'
 
       - name: "Upload Artifact"
         if: github.event_name == 'push'
         uses: actions/upload-artifact@v3
         with:
-          name: subseven.xpi
+          name: firefox-subseven-theme.xpi
           path: ${{ steps.web-ext-build.outputs.target }}
