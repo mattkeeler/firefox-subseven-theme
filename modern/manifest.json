@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "subseven-modern",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "subseven-theme@keeler.org"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "rgb(128, 128, 255)",
+      "toolbar": "rgb(0, 64, 128)",
+      "toolbar_text": "rgb(128, 128, 255)",
+      "toolbar_field": "rgb(0, 0, 0)",
+      "toolbar_field_text": "rgb(233, 233, 240)",
+      "popup": "rgb(0, 64, 128)",
+      "popup_text": "rgb(128, 128, 255)",
+      "tab_line": "rgb(74, 75, 165)",
+      "tab_background_text": "rgb(47, 48, 104)",
+      "tab_loading": "rgb(74, 75, 165)",
+      "ntp_background": "rgp(15, 17, 28)",
+      "ntp_text": "rgb(255, 255, 255)"
+    }
+  }
+}

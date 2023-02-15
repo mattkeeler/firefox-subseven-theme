@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "subseven-classic",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "subseven-theme@keeler.org"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#8080FF",
+      "tab_line": "#4B4BA5",
+      "tab_text": "#FFFFFF",
+      "tab_loading": "#4B4BA5",
+      "tab_background_text": "#FFFFFF",
+      "tab_background_separator": "#004080",
+      "toolbar": "#004080",
+      "toolbar_top_separator": "#004080",
+      "toolbar_bottom_separator": "#004080",
+      "toolbar_text": "#FFFFFF",
+      "toolbar_vertical_separator": "#8080FF",
+      "toolbar_field": "#000000",
+      "toolbar_field_text": "#FFFFFF",
+      "toolbar_field_highlight": "#8080FF",
+      "popup": "#004080",
+      "popup_text": "#FFFFFF",
+      "popup_border": "#8080FF",
+      "popup_highlight": "#8080FF",
+      "bookmark_text": "#FFFFFF",
+      "ntp_background": "#0F111C",
+      "ntp_text": "#FFFFFF",
+      "sidebar": "#000000",
+      "sidebar_border": "#000000",
+      "sidebar_text": "#8080FF",
+      "sidebar_highlight_text": "#8080FF",
+      "sidebar_highlight": "#004080"
+    }
+  }
+}
