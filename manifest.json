@@ -10,7 +10,7 @@
   "theme": {
     "colors": {
       "frame": "#8080FF",
-      "frame_inactive": "#004080",
+      "frame_inactive": "#9E9EFF",
       "tab_line": "#4B4BA5",
       "tab_text": "#FFFFFF",
       "tab_loading": "#4B4BA5",
