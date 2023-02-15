@@ -4,7 +4,7 @@
 
 A throwback theme with the color scheme of [SubSeven](https://darknetdiaries.com/episode/20/), the screen-flipping, CD tray-popping scourge of AOLers in the early 2000s.
 
-Also take a look at the [SubSeven Legacy](https://github.com/DarkCoderSc/SubSeven) project.
+Currently just a color scheme in the `manifest.json` file, but could expand to add CSS down the road.
 
 ## Contributing
 

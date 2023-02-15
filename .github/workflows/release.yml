@@ -1,0 +1,41 @@
+---
+name: 'Release'
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: "web-ext lint"
+        if: github.event_name == 'pull_request'
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: lint
+          source: src
+          channel: listed
+
+      - name: "web-ext build"
+        if: github.event_name == 'push'
+        id: web-ext-build
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: build
+          source: src
+          filename: "subseven.xpi"
+          #ignoreFiles: '[ "" ]'
+
+      - name: "Upload Artifact"
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v3
+        with:
+          name: subseven.xpi
+          path: ${{ steps.web-ext-build.outputs.target }}
