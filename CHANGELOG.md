@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.4.0...1.5.0) (2023-02-18)
+
+
+### Features
+
+* add setting back ([#13](https://github.com/mattkeeler/firefox-subseven-theme/issues/13)) ([42aabad](https://github.com/mattkeeler/firefox-subseven-theme/commit/42aabad951c7c3ae708c98a453fef964cda74736))
+
 # [1.4.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.3.0...1.4.0) (2023-02-18)
 
 
