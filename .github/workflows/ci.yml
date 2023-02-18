@@ -58,9 +58,3 @@ jobs:
           path: ${{ steps.web-ext-build.outputs.target }}
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
-        with:
-          extra_plugins: |
-            @semantic-release/commit-analyzer
-            @semantic-release/release-notes-generator
-            @semantic-release/git
-            @semantic-release/github'
