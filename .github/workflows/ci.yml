@@ -41,6 +41,8 @@ jobs:
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - name: "web-ext build"
         id: web-ext-build
         uses: kewisch/action-web-ext@v1
@@ -54,9 +56,11 @@ jobs:
         with:
           name: firefox-subseven-theme.xpi
           path: ${{ steps.web-ext-build.outputs.target }}
-      - name: "Setup Node.JS"
-        uses: actions/setup-node@v2
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
         with:
-          node-version: 18
-      - name: "Semantic Release"
-        run: npx semantic-release
+          extra_plugins: |
+            @semantic-release/commit-analyzer
+            @semantic-release/release-notes-generator
+            @semantic-release/git
+            @semantic-release/github'
