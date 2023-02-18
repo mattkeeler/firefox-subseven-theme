@@ -51,6 +51,7 @@ jobs:
           source: src
           filename: "firefox-subseven-theme.xpi"
           #ignoreFiles: '[ "" ]'
+      - run: ls -la
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v3
         with:
