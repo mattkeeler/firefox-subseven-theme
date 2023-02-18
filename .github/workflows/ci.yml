@@ -41,6 +41,8 @@ jobs:
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - name: "web-ext build"
         id: web-ext-build
         uses: kewisch/action-web-ext@v1
