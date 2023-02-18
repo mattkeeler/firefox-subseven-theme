@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.3.0...1.4.0) (2023-02-18)
+
+
+### Features
+
+* test mozilla upload ([#12](https://github.com/mattkeeler/firefox-subseven-theme/issues/12)) ([415d00e](https://github.com/mattkeeler/firefox-subseven-theme/commit/415d00ec745ee7a4192cfcdf9f007cddf8ba260c))
+
 # [1.3.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.2.0...1.3.0) (2023-02-18)
 
 
