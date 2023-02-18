@@ -1,5 +1,5 @@
 ---
-name: 'Release'
+name: 'CI'
 on:
   push:
     branches:
@@ -11,8 +11,23 @@ on:
       - 'src/**'
 
 jobs:
+  lint:
+    name: "Lint"
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+      - name: "web-ext lint"
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: lint
+          source: src
+          channel: unlisted
+
   release:
-    name: Release
+    name: "Release"
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,22 +35,11 @@ jobs:
       pull-requests: write
       id-token: write
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout
+      - name: "Checkout"
         uses: actions/checkout@v2
-
-      - name: "web-ext lint"
-        if: github.event_name == 'pull_request'
-        uses: kewisch/action-web-ext@v1
-        with:
-          cmd: lint
-          source: src
-          channel: unlisted
-
       - name: "web-ext build"
-        if: github.event_name == 'push'
         id: web-ext-build
         uses: kewisch/action-web-ext@v1
         with:
@@ -43,20 +47,14 @@ jobs:
           source: src
           filename: "firefox-subseven-theme.xpi"
           #ignoreFiles: '[ "" ]'
-
       - name: "Upload Artifact"
-        if: github.event_name == 'push'
         uses: actions/upload-artifact@v3
         with:
           name: firefox-subseven-theme.xpi
           path: ${{ steps.web-ext-build.outputs.target }}
-
       - name: "Setup Node.JS"
-        if: github.event_name == 'push'
         uses: actions/setup-node@v2
         with:
           node-version: 18
-
       - name: "Semantic Release"
-        if: github.event_name == 'push'
         run: npx semantic-release
