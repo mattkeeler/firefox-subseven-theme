@@ -48,3 +48,9 @@ jobs:
         with:
           name: firefox-subseven-theme.xpi
           path: ${{ steps.web-ext-build.outputs.target }}
+
+      - name: "Release"
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ${{ steps.web-ext-build.output.targets }}
