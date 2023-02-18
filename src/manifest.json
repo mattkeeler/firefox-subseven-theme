@@ -1,7 +1,12 @@
 {
   "manifest_version": 2,
-  "version": "1.5",
+  "version": "1.0",
   "name": "subseven",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "subseven-theme"
+    }
+  },
   "theme": {
     "colors": {
       "frame": "#8080FF",
