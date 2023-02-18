@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.2.0...1.3.0) (2023-02-18)
+
+
+### Features
+
+* update archive path, update config too ([#11](https://github.com/mattkeeler/firefox-subseven-theme/issues/11)) ([19e2073](https://github.com/mattkeeler/firefox-subseven-theme/commit/19e20737129f449fdb12cf1253f24ff93fcd49b3))
+
 # [1.2.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.1.0...1.2.0) (2023-02-18)
 
 
