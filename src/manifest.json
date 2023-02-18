@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-  "version": "1.0",
+  "version": "1.1",
   "name": "subseven",
   "browser_specific_settings": {
     "gecko": {
-      "id": "subseven-theme@blackhole.rip"
+      "id": "sub7@blackhole.rip"
     }
   },
   "theme": {
