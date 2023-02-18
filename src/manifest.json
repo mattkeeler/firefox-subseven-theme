@@ -2,11 +2,6 @@
   "manifest_version": 2,
   "version": "1.5",
   "name": "subseven",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "sub7@blackhole.rip"
-    }
-  },
   "theme": {
     "colors": {
       "frame": "#8080FF",
