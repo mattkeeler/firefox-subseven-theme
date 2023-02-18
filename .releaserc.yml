@@ -10,8 +10,9 @@ plugins:
   - - "@semantic-release/git"
     - assets:
         - CHANGELOG.md
-        - src/manifest.json
-  - "@semantic-release/github"
+  - - "@semantic-release/github"
+    - assets:
+      - path: action-web-ext/firefox-subseven-theme.xpi
 verifyConditions:
   - "@semantic-release/changelog"
   - "@semantic-release/github"
