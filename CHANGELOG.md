@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.5.0...1.6.0) (2023-02-18)
+
+
+### Features
+
+* try this id ([#14](https://github.com/mattkeeler/firefox-subseven-theme/issues/14)) ([5284ea3](https://github.com/mattkeeler/firefox-subseven-theme/commit/5284ea3e54d2542c54f2f4ca3a86e7cabac57572))
+
 # [1.5.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.4.0...1.5.0) (2023-02-18)
 
 
