@@ -15,10 +15,12 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+      issues: write
+      pull-request: write
       id-token: write
     env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout
@@ -49,8 +51,12 @@ jobs:
           name: firefox-subseven-theme.xpi
           path: ${{ steps.web-ext-build.outputs.target }}
 
-      - name: "Release"
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: "Setup Node.JS"
+        if: github.event_name == 'push'
+        uses: actions/setup-node@v2
         with:
-          files: ${{ steps.web-ext-build.output.targets }}
+          node-version: 18
+
+      - name: "Semantic Release"
+        if: github.event_name == 'push'
+        run: npx semantic-release
