@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.6.0...1.7.0) (2023-02-19)
+
+
+### Features
+
+* make updates ([#15](https://github.com/mattkeeler/firefox-subseven-theme/issues/15)) ([f9c0325](https://github.com/mattkeeler/firefox-subseven-theme/commit/f9c032583d391005131a15f2f96301af4cd30e09))
+
 # [1.6.0](https://github.com/mattkeeler/firefox-subseven-theme/compare/1.5.0...1.6.0) (2023-02-18)
 
 
