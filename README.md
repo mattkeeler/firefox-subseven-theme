@@ -8,18 +8,16 @@ A Firefox theme with the SubSeven color palette. Currently this is just a `src/m
 
 This theme is pending review on the Mozilla add-ons hub.
 
-In the meantime, you can install it manually with the `.xpi` file from the [latest release](https://github.com/mattkeeler/firefox-subseven-theme/releases/latest).
-
-Unsigned themes can be installed:
+In the meantime, you can install the unsigned theme using the `.xpi` file from the [latest release](https://github.com/mattkeeler/firefox-subseven-theme/releases/latest). Unsigned themes can be installed in two ways:
 
 - temporarily via `about:debugging#/runtime/this-firefox`
-- permanently by via a build like [developer edition](https://www.mozilla.org/en-US/firefox/developer/) or [nightly](https://www.mozilla.org/en-US/firefox/112.0a1/releasenotes/), and setting `xpinstall.signatures.required = false` in `about:config`
+- permanently by using a build like [developer edition](https://www.mozilla.org/en-US/firefox/developer/) or [nightly](https://www.mozilla.org/en-US/firefox/112.0a1/releasenotes/), and setting `xpinstall.signatures.required = false` in `about:config`
 
 ## Contributing
 
 > 🪝 Save cycle time by using this repo's [pre-commit](https://pre-commit.com/) hooks: `pre-commit install`
 
-New to firefox extension/theme development like I was? These are good resources to get started:
+New to firefox extension/theme development like me? These resources I used to get started:
 
 - [Theme creation basics](https://extensionworkshop.com/documentation/themes/) - start here
 - Developer docs on [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), particularly the [theme](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) section
