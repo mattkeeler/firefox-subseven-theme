@@ -1,8 +1,8 @@
-<image>
+![Screenshot of SubSeven Theme](img/subseven-theme.png)
 
 ## SubSeven Theme for Firefox
 
-A Firefox theme with the color scheme of SubSeven.
+Firefox, but with the SubSeven color palette.
 
 ## Contributing
 
