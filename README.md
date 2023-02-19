@@ -1,8 +1,19 @@
 ![Screenshot of SubSeven Theme](img/subseven-theme.png)
 
-## SubSeven Theme for Firefox
+## Description
 
-Firefox, but with the SubSeven color palette. 😈
+A Firefox theme with the SubSeven color palette. Currently this is just a `src/manifest.json` file, but future iterations may include CSS-enhanced alternatives to choose from.
+
+## Installation
+
+This theme is pending review on the Mozilla add-ons hub.
+
+In the meantime, you can install it manually with the `.xpi` file from the [latest release](https://github.com/mattkeeler/firefox-subseven-theme/releases/latest).
+
+Unsigned themes can be installed:
+
+- temporarily via `about:debugging#/runtime/this-firefox`
+- permanently by via a build like [developer edition](https://www.mozilla.org/en-US/firefox/developer/) or [nightly](https://www.mozilla.org/en-US/firefox/112.0a1/releasenotes/), and setting `xpinstall.signatures.required = false` in `about:config`
 
 ## Contributing
 
@@ -14,5 +25,4 @@ New to firefox extension/theme development like I was? These are good resources 
 - Developer docs on [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), particularly the [theme](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) section
 - [Firefox extension .xpi file structure: description, contents, creation, and installation](https://stackoverflow.com/questions/30865644/firefox-extension-xpi-file-structure-description-contents-creation-and-inst/31043045#31043045)
 - [Getting started with web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) - cli tool designed to speed up various parts of the extension development process
-
-The release and beta versions of Firefox don't allow installation of unsigned add-ons. To test changes locally, you'll need to run one of the other builds, such as [developer edition](https://www.mozilla.org/en-US/firefox/developer/) or [nightly](https://www.mozilla.org/en-US/firefox/112.0a1/releasenotes/), and set `xpinstall.signatures.required = false` in `about:config`.
+- [Extensions and the add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)

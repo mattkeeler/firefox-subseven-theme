@@ -20,6 +20,6 @@ publish:
   - - "@semantic-release/github"
     - assets:
       - path: web-ext-artifacts/firefox-subseven-theme.xpi
-success: false
-fail: false
-tagFormat: "${version}"
+success: true
+fail: true
+tagFormat: "v${version}"
