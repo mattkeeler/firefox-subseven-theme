@@ -2,7 +2,7 @@
 
 ## SubSeven Theme for Firefox
 
-Firefox, but with the SubSeven color palette.
+Firefox, but with the SubSeven color palette. 😈
 
 ## Contributing
 
