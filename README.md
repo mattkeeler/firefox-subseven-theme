@@ -2,7 +2,7 @@
 
 ## Description
 
-A Firefox theme with the SubSeven color palette. Currently this is just a `src/manifest.json` file, but future iterations may include CSS-enhanced alternatives to choose from.
+A Firefox theme with the SubSeven color palette.
 
 ## Installation
 
