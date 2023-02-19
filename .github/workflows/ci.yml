@@ -1,0 +1,70 @@
+---
+name: 'CI'
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+  pull_request:
+    paths:
+      - 'src/**'
+
+jobs:
+  lint:
+    name: "Lint"
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: "web-ext lint"
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: lint
+          source: src
+
+  release:
+    name: "Release"
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: "web-ext build"
+        id: web-ext-build
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: build
+          source: src
+          filename: "firefox-subseven-theme.xpi"
+          #ignoreFiles: '[ "" ]'
+
+      - name: Semantic Release
+        id: semantic-release
+        uses: cycjimmy/semantic-release-action@v3
+
+      - name: "web-ext sign"
+        id: web-ext-sign
+        if: steps.semantic-release.outputs.new_release_published == 'true'
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: sign
+          source: ${{ steps.web-ext-build.outputs.target }}
+          channel: listed
+          apiKey: ${{ secrets.AMO_SIGN_KEY }}
+          apiSecret: ${{ secrets.AMO_SIGN_SECRET }}
+          timeout: 900000
